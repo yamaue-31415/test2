@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>パスワード保護ページ</title>
+    <style>
+        /* 最初は非表示にする */
+        #content {
+            display: none;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            let password = prompt("パスワードを入力してください:");
+            if (password === "secret123") {
+                document.getElementById("content").style.display = "block"; // 正しい場合に表示
+            } else {
+                alert("パスワードが違います。");
+                window.location.href = "https://fishingmax.co.jp/fishingpost/1425963"; // 間違えたらリダイレクト
+            }
+        }
+        window.onload = checkPassword;
+    </script>
+</head>
+<body>
+    <div id="content">
+        <h1>人権に配慮した人権</h1>
+        <p>やまうえ星人</p>
+    </div>
+</body>
+</html>
